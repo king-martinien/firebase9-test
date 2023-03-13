@@ -1,0 +1,33 @@
+:root {
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-bg: #f5f5f5;
+    --clr-vue-green: #42b883;
+    --clr-vue-green-dark: #35495e;
+    --clr-vue-green-light: #3eaf7c;
+    --clr-vue-green-lighter: #dff2e5;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-family: Prompt, sans-serif;
+    background-color: var(--clr-bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+ul {
+    list-style: none;
+}
