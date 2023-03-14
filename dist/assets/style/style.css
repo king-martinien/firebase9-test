@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap");
+
 :root {
     --clr-white: #fff;
     --clr-black: #000;
@@ -6,6 +9,9 @@
     --clr-vue-green-dark: #35495e;
     --clr-vue-green-light: #3eaf7c;
     --clr-vue-green-lighter: #dff2e5;
+    --clr-firestore-blue: #1967d2;
+    --clr-firebase-orange: #f57c00;
+    --clr-firebase-orange-light: #f9a825;
 }
 
 *,
@@ -14,13 +20,23 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Prompt, sans-serif;
 }
 
 html,
 body {
     min-height: 100vh;
-    font-family: Prompt, sans-serif;
     background-color: var(--clr-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: Archivo, sans-serif; */
+    color: var(--clr-vue-green-dark);
 }
 
 a {
@@ -28,6 +44,143 @@ a {
     color: var(--clr-black);
 }
 
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+}
+
+input {
+    border-radius: 4px;
+    border: none;
+    padding: 0 1rem;
+    height: 45px;
+    font-size: 16px;
+    border: 2px solid var(--clr-vue-green-dark);
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+input:focus {
+    border: 2px solid var(--clr-firebase-orange);
+}
+
 ul {
     list-style: none;
+}
+
+form {
+    padding: 1.5rem;
+    background-color: var(--clr-white);
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form h3 {
+    margin-bottom: 0.5rem;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* End Container */
+
+/* Btn */
+.btn {
+    width: 100%;
+    margin: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.btn .loading {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-white);
+    border-top-color: var(--clr-firebase-orange);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--clr-firebase-orange-light) 0%, var(--clr-firebase-orange) 100%);
+    color: var(--clr-white);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--clr-firebase-orange) 0%, var(--clr-firebase-orange-light) 100%);
+}
+
+/*  End Btn */
+
+/* Entry */
+.entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.entry label {
+    font-size: 14px;
+    margin-bottom: 0.1rem;
+}
+/* End Entry */
+
+.intro {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.intro h1 {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.intro h1 .relative {
+    position: relative;
+    color: var(--clr-white);
+}
+.intro h1 .relative::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--clr-firebase-orange-light) 0%, var(--clr-firebase-orange) 100%);
+    border-radius: 4px;
+}
+
+.intro h1 .relative span {
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
 }

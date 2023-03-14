@@ -26,17 +26,48 @@
     <meta property="twitter:image" content="assets/images/firebase-logo.png">
 
     <link rel="shortcut icon" href="assets/images/firebase-logo.png" type="image/png">
-    <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
 <body>
-    <h1>Getting started with Firebase 9</h1>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="intro">
+                <h1>Getting started with <span class="relative"><span>Firebase 9</span></span></h1>
+                <h2>Firebase Firestore</h2>
+            </div>
+
+            <!-- Add Student Form -->
+            <form class="add-student-form">
+                <h3>Add Student</h3>
+                <div class="entry">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First name" required>
+                </div>
+
+                <div class="entry">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last name" required>
+                </div>
+
+                <div class="entry">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="entry">
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" id="phone" placeholder="Phone Number" required maxlength="9">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </main>
 
 
     <!-- Script -->
